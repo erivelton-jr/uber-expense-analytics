@@ -11,10 +11,11 @@ st.set_page_config(
 st.title("📊 Análise de Despesas com Uber")
 uber_csv = st.file_uploader("Envie o arquivo exportado da Uber (.csv)", type="csv")
 
-col1, col2 = st.columns([1, 3])
+
 
 if uber_csv:
     df_completed = data_pipeline.uber_csv(uber_csv)
+    col1, col2 = st.columns([0.9, 3])
     with st.sidebar:
         st.header("📊 Filtros do Dashboard")
         st.markdown("Use os filtros abaixo para personalizar a visualização dos dados.")
@@ -28,26 +29,46 @@ if uber_csv:
         df_filtered = df_completed[(df_completed['request_time'].dt.year.isin(year)) &
                                    (df_completed['product_type'].isin(trip_type))]
 
-        st.metric("💰 Total Gasto", f"R$ {df_filtered['fare_amount'].sum():,.2f}")
-        st.metric("🚗 Total Corridas", df_filtered.shape[0])
-        st.metric("📍 Total Km", f"{df_filtered['distance'].sum():,.2f} km")
-        st.metric("🚗 Corrida mais cara", f"R$ {df_filtered['fare_amount'].max():,.2f}")
+        # Exibir métricas principais
+        col1.metric("💰 Total Gasto", f"R$ {df_filtered['fare_amount'].sum():,.2f}",
+                    delta=f"R$ {df_filtered['fare_amount'].mean():,.2f} por corrida",
+                    border=True)
+
+        col1.metric("🚗 Total Corridas", df_filtered.shape[0],
+                    delta=f"{df_filtered.shape[0]/len(year):.0f} por ano",
+                    border=True)
+
+        col1.metric("📍 Total Km", f"{df_filtered['distance'].sum():,.2f} km",
+                    delta=f"{df_filtered['distance'].mean():.2f} km por corrida",
+                    border=True)
+
+        col1.metric("🚗 Corrida mais cara", f"R$ {df_filtered['fare_amount'].max():,.2f}",
+                    delta=f"R$ {df_filtered['fare_amount'].max() - df_filtered['fare_amount'].min():,.2f} de diferença",
+                    border=True)
     with col2:
-        # Gastos por mes
-        df_filtered['month'] = df_filtered['request_time'].dt.to_period('M')
-        monthly_expenses = df_filtered.groupby('month')['fare_amount'].sum().reset_index()
-        monthly_expenses['month'] = monthly_expenses['month'].dt.to_timestamp()
-        charts.bar_chart(monthly_expenses)
+        st.markdown("##### 📊 Gastos e KM percorridos por mês")
+        def monthly_expenses(df=df_filtered):
+            df['month'] = df['request_time'].dt.to_period('M').astype(str)
+            df_grouped = df.groupby("month").agg({
+                "fare_amount": "sum",  # gasto total
+                "distance": "sum"  # km total
+            }).reset_index()
+            charts.bar_chart(df_grouped)
 
-    def heatmap(df):
-        df = df.groupby(['dropoff_lat', 'dropoff_lng'])['status'].count().reset_index()
-        return df
-    map = heatmap(df_filtered)
-    charts.map_chart(map)
+        monthly_expenses()
 
-    st.markdown("---")
+        st.markdown("##### 🗺️ Mapa de Calor dos Locais de Desembarque")
+        def heatmap(df=df_filtered):
+            df = df.groupby(['dropoff_lat', 'dropoff_lng']).size().reset_index(name='freq')
+            charts.map_chart(df)
+        heatmap()
+        st.markdown("---")
 
     # Exibir tabela filtrada
     st.subheader("📊 Tabela de Corridas Filtradas")
     st.dataframe(df_completed)
     st.markdown("---")
+
+
+
+
