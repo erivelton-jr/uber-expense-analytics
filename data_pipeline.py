@@ -66,7 +66,3 @@ def uber_csv(csv):
         return df
     except Exception as e:
         st.error(f"❌ Erro ao carregar o arquivo: {e}")
-
-
-
-extract_data_from_pdf("Receipt_02Mar2024_153137.pdf")
