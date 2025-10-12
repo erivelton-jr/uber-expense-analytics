@@ -50,7 +50,6 @@ def extract_data_from_pdf(pdf_file):
                             "kilometers_traveled": km
                         }
                         price = date= km = None  # Reset values after adding to DataFrame
-        print(df)
     return df
 
 

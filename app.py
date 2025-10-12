@@ -4,7 +4,7 @@ import charts
 
 st.set_page_config(
     page_title="Uber Expense Analytics",
-    page_icon="🚕",
+    page_icon="🚙",
     layout="wide",
     initial_sidebar_state="expanded")
 
@@ -16,14 +16,19 @@ uber_csv = st.file_uploader("Envie o arquivo exportado da Uber (.csv)", type="cs
 if uber_csv:
     df_completed = data_pipeline.uber_csv(uber_csv)
     col1, col2 = st.columns([0.9, 3])
+
     with st.sidebar:
         st.header("📊 Filtros do Dashboard")
         st.markdown("Use os filtros abaixo para personalizar a visualização dos dados.")
+
         year = sorted(df_completed['request_time'].dt.year.unique().tolist())
         year = st.sidebar.multiselect("Ano", options=year, default=year)
+
         st.sidebar.markdown("---")
+
         product_type = sorted(df_completed['product_type'].dropna().astype(str).unique().tolist())
         trip_type = st.sidebar.multiselect("Tipo de corrida", options=product_type, default=product_type)
+
     with col1:
         # Métricas principais
         df_filtered = df_completed[(df_completed['request_time'].dt.year.isin(year)) &
@@ -45,6 +50,8 @@ if uber_csv:
         col1.metric("🚗 Corrida mais cara", f"R$ {df_filtered['fare_amount'].max():,.2f}",
                     delta=f"R$ {df_filtered['fare_amount'].max() - df_filtered['fare_amount'].min():,.2f} de diferença",
                     border=True)
+
+
     with col2:
         st.markdown("##### 📊 Gastos e KM percorridos por mês")
         def monthly_expenses(df=df_filtered):
@@ -58,17 +65,15 @@ if uber_csv:
         monthly_expenses()
 
         st.markdown("##### 🗺️ Mapa de Calor dos Locais de Desembarque")
-        def heatmap(df=df_filtered):
-            df = df.groupby(['dropoff_lat', 'dropoff_lng']).size().reset_index(name='freq')
-            charts.map_chart(df)
-        heatmap()
-        st.markdown("---")
+
+        route_data = charts.trace_route(df_filtered)
+
+        charts.map_chart(df_filtered)
 
     # Exibir tabela filtrada
     st.subheader("📊 Tabela de Corridas Filtradas")
     st.dataframe(df_completed)
     st.markdown("---")
-
 
 
 
