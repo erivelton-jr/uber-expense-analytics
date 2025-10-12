@@ -1,0 +1,5 @@
+streamlit==1.50.0
+pandas==2.3.3
+plotly==5.24.1
+pdfplumber==0.11.4
+openrouteservice==2.3.3
