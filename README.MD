@@ -42,7 +42,7 @@ To get your Uber trip history:
 4. **Download the File**
    - You'll receive an email with a download link
    - Download the ZIP file
-   - Extract the `trips_data.csv` file
+   - Extract the file
 
 ### 3. Upload to the Application
 
@@ -160,8 +160,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Erivelton Junior**
 
-- GitHub: [@your-username](https://github.com/erivelton-jr)
-- LinkedIn: [Your Profile](https://linkedin.com/in/eriveltonjr)
+- GitHub: [@erivelton-jr](https://github.com/erivelton-jr)
+- LinkedIn: [Erivelton Ribeiro Luz Junior](https://linkedin.com/in/eriveltonjr)
 
 ## 🙏 Acknowledgments
 
