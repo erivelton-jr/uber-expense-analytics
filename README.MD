@@ -160,8 +160,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Erivelton Junior**
 
-- GitHub: [@your-username](https://github.com/erivelton-jr)
-- LinkedIn: [Your Profile](https://linkedin.com/in/eriveltonjr)
+- GitHub: [@erivelton-jr](https://github.com/erivelton-jr)
+- LinkedIn: [Erivelton Ribeiro Luz Junior](https://linkedin.com/in/eriveltonjr)
 
 ## 🙏 Acknowledgments
 
