@@ -23,8 +23,9 @@ Visit [uber-expense-analytics.streamlit.app](https://uber-expense-analytics.stre
 
 ### 2. Export Your Uber Data
 
-<div style="display: flex;">
-<div style="flex: 1; padding: 10px;">
+<table>
+<tr>
+<td width="50%" valign="top">
 
 To get your Uber trip history:
 
@@ -47,13 +48,14 @@ To get your Uber trip history:
    - Download the ZIP file
    - Extract the `trips_data.csv` file
 
-</div>
-<div style="flex: 1; padding: 10px; margin-left: 10px; text-align: center;">
+</td>
+<td width="50%" align="center" valign="top">
 
-<img src="img/download_receipt.gif" alt="Download Uber Data" style="width: 60%; border: none; outline: none; box-shadow: none;">
+<img src="img/download_receipt.gif" alt="Download Uber Data" width="90%">
 
-</div>
-</div>
+</td>
+</tr>
+</table>
 
 ### 3. Faça Upload na Aplicação
 
