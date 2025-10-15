@@ -45,12 +45,8 @@ Visit [uber-expense-analytics.streamlit.app](https://uber-expense-analytics.stre
       - Download the ZIP file
       - Extract the `trips_data.csv` file
 </div
-<div style="flex: 1; padding: 10px; margin-left: 10px; text-align: center;">
-   <img src="img/download_receipt.gif" alt="Download Uber Data" 
-         style="max-width: 70%; border: none; outline: none; box-shadow: none;">
-</div>
-</div>
-
+<git status
+git diff README.pt-BR.md
 ### 3. Upload to the Application
 
 1. In the application, click the **"Browse files"** button or drag your CSV file (eg. `trips_data-0.csv`) into the upload area
