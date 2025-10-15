@@ -55,7 +55,7 @@ To get your Uber trip history:
 </div>
 </div>
 
-
+### 3. Faça Upload na Aplicação
 
 1. In the application, click the **"Browse files"** button or drag your CSV file (eg. `trips_data-0.csv`) into the upload area
 2. Wait for data processing
@@ -67,17 +67,17 @@ To get your Uber trip history:
 ### Main Dashboard
 The dashboard displays key metrics and interactive charts of your expenses.
 
-<img src="img/main_dashboard.png" alt="Main Dashboard" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
+<img src="img/main_dashboard.png" alt="Main Dashboard" style="width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Heat Map
 Visualize the locations where you use Uber most through an interactive heat map.
 
-<img src="img/heatmap.png" alt="Heat Map" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
+<img src="img/heatmap.png" alt="Heat Map" style="width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Most Expensive Trip Route
 See the complete route of your most costly trip with pick-up and drop-off points.
 
-<img src="img/route.png" alt="Most Expensive Trip Route" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
+<img src="img/route.png" alt="Most Expensive Trip Route" style="width: 60%; border: none; outline: none; box-shadow: none;">
 
 ## 🛠️ Technologies Used
 

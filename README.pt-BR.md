@@ -50,6 +50,7 @@ Visite [uber-expense-analytics.streamlit.app](https://uber-expense-analytics.str
          style="max-width: 70%; border: none; outline: none; box-shadow: none;">
 </div>
 </div>
+
 ### 3. Faça Upload na Aplicação
 
 1. Na aplicação, clique no botão **"Browse files"** ou arraste seu arquivo CSV (ex. `trips_data-0.csv`) para a área de upload
