@@ -128,7 +128,6 @@ UberExpenseAnalytics/
 └── .idea/                # PyCharm configurations (IDE)
 ```
 
-
 ## 📊 Data Format
 
 The Uber CSV file should contain the following columns:

@@ -6,7 +6,7 @@
 
 Uma aplicação web interativa para análise completa de suas despesas com Uber. Visualize gastos, distâncias percorridas, mapas de calor e rotas da sua corrida mais cara.
 
-## 📊 Funcionalidades
+## 📊 Funcionalidades 
 
 - **📈 Dashboard Interativo**: Visualize métricas principais como total gasto, número de corridas e quilometragem
 - **🗓️ Filtros Avançados**: Filtre por ano e tipo de corrida (UberX, Uber Comfort, etc.)
