@@ -22,28 +22,34 @@ Uma aplicação web interativa para análise completa de suas despesas com Uber.
 Visite [uber-expense-analytics.streamlit.app](https://uber-expense-analytics.streamlit.app/)
 
 ### 2. Exporte Seus Dados do Uber
+<div style="display: flex;">
+   <div style="flex: 1; padding: 10px;">
+   Para obter seu histórico de viagens do Uber:
 
-Para obter seu histórico de viagens do Uber:
+   1. **Acesse o site do Uber**
+      - Entre em [https://privacy.uber.com/exploreyourdata/](https://privacy.uber.com/exploreyourdata/)
+      - Faça login com sua conta
 
-1. **Acesse o site do Uber**
-   - Entre em [https://privacy.uber.com/exploreyourdata/](https://privacy.uber.com/exploreyourdata/)
-   - Faça login com sua conta
+   2. **Navegue até Download**
+      - Clique no menu superior
+      - Selecione **"Baixar"** ou **"Download"**
+      - Clique em **"Baixar seus dados"** ou **"Download your data"**
 
-2. **Navegue até Download**
-   - Clique no menu superior
-   - Selecione **"Baixar"** ou **"Download"**
-   - Clique em **"Baixar seus dados"** ou **"Download your data"**
+   3. **Solicite o Export**
+      - Marque a opção **"Histórico de viagens"** ou **"Trip history"**
+      - Clique em **"Enviar solicitação"** ou **"Submit request"**
+      - Aguarde o email de confirmação (pode levar alguns minutos ou até 24h)
 
-3. **Solicite o Export**
-   - Marque a opção **"Histórico de viagens"** ou **"Trip history"**
-   - Clique em **"Enviar solicitação"** ou **"Submit request"**
-   - Aguarde o email de confirmação (pode levar alguns minutos ou até 24h)
-
-4. **Baixe o Arquivo**
-   - Você receberá um email com link para download
-   - Baixe o arquivo ZIP
-   - Extraia o arquivo `trips_data.csv`
-
+   4. **Baixe o Arquivo**
+      - Você receberá um email com link para download
+      - Baixe o arquivo ZIP
+      - Extraia o arquivo `trips_data.csv`
+   </div>
+<div style="flex: 1; padding: 10px; margin-left: 10px; text-align: center;">
+   <img src="img/download_receipt.gif" alt="Download Uber Data" 
+         style="max-width: 100%; border: none; outline: none; box-shadow: none;">
+</div>
+</div>
 ### 3. Faça Upload na Aplicação
 
 1. Na aplicação, clique no botão **"Browse files"** ou arraste seu arquivo CSV (ex. `trips_data-0.csv`) para a área de upload
@@ -55,12 +61,15 @@ Para obter seu histórico de viagens do Uber:
 
 ### Dashboard Principal
 O dashboard exibe métricas chave e gráficos interativos de suas despesas.
+<img src="img/main_dashboard.png" alt="Main Dashboard" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Mapa de Calor
 Visualize os locais onde você mais utiliza o Uber através de um mapa de calor interativo.
+<img src="img/heatmap.png" alt="Heat Map" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Rota da Corrida Mais Cara
 Veja o trajeto completo da sua viagem mais custosa com pontos de embarque e desembarque.
+<img src="img/route.png" alt="Most Expensive Trip Route" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ## 🛠️ Tecnologias Utilizadas
 

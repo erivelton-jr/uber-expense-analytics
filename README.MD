@@ -22,27 +22,34 @@ An interactive web application for comprehensive analysis of your Uber expenses.
 Visit [uber-expense-analytics.streamlit.app](https://uber-expense-analytics.streamlit.app/)
 
 ### 2. Export Your Uber Data
-
-To get your Uber trip history:
-
-1. **Access Uber Website**
-   - Go to [https://privacy.uber.com/exploreyourdata/](https://privacy.uber.com/exploreyourdata/)
-   - Log in with your account
-
-2. **Navigate to Downloand**
-   - Click on the top menu
-   - Select **"Download"**
-   - Click on **"Download your data"**
-
-3. **Request the Export**
-   - Check the **"Trip history"** option
-   - Click **"Submit request"**
-   - Wait for the confirmation email (can take a few minutes or up to 24 hours)
-
-4. **Download the File**
-   - You'll receive an email with a download link
-   - Download the ZIP file
-   - Extract the `trips_data.csv` file
+<div style="display: flex;">
+   <div style="flex: 1; padding: 10px;">
+   To get your Uber trip history:
+   
+   1. **Access Uber Website**
+      - Go to [https://privacy.uber.com/exploreyourdata/](https://privacy.uber.com/exploreyourdata/)
+      - Log in with your account
+   
+   2. **Navigate to Downloand**
+      - Click on the top menu
+      - Select **"Download"**
+      - Click on **"Download your data"**
+   
+   3. **Request the Export**
+      - Check the **"Trip history"** option
+      - Click **"Submit request"**
+      - Wait for the confirmation email (can take a few minutes or up to 24 hours)
+   
+   4. **Download the File**
+      - You'll receive an email with a download link
+      - Download the ZIP file
+      - Extract the `trips_data.csv` file
+</div
+<div style="flex: 1; padding: 10px; margin-left: 10px; text-align: center;">
+   <img src="img/download_receipt.gif" alt="Download Uber Data" 
+         style="max-width: 100%; border: none; outline: none; box-shadow: none;">
+</div>
+</div>
 
 ### 3. Upload to the Application
 
@@ -55,12 +62,15 @@ To get your Uber trip history:
 
 ### Main Dashboard
 The dashboard displays key metrics and interactive charts of your expenses.
+<img src="img/main_dashboard.png" alt="Main Dashboard" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Heat Map
 Visualize the locations where you use Uber most through an interactive heat map.
+<img src="img/heatmap.png" alt="Heat Map" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Most Expensive Trip Route
 See the complete route of your most costly trip with pick-up and drop-off points.
+<img src="img/route.png" alt="Most Expensive Trip Route" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ## 🛠️ Technologies Used
 
@@ -160,8 +170,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Erivelton Junior**
 
-- GitHub: [@your-username](https://github.com/erivelton-jr)
-- LinkedIn: [Your Profile](https://linkedin.com/in/eriveltonjr)
+- GitHub: [@erivelton-jr](https://github.com/erivelton-jr)
+- LinkedIn: [Erivelton Ribeiro Luz Junior](https://linkedin.com/in/eriveltonjr)
 
 ## 🙏 Acknowledgments
 
