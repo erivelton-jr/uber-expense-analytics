@@ -61,14 +61,17 @@ Visite [uber-expense-analytics.streamlit.app](https://uber-expense-analytics.str
 
 ### Dashboard Principal
 O dashboard exibe métricas chave e gráficos interativos de suas despesas.
+
 <img src="img/main_dashboard.png" alt="Main Dashboard" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Mapa de Calor
 Visualize os locais onde você mais utiliza o Uber através de um mapa de calor interativo.
+
 <img src="img/heatmap.png" alt="Heat Map" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ### Rota da Corrida Mais Cara
 Veja o trajeto completo da sua viagem mais custosa com pontos de embarque e desembarque.
+
 <img src="img/route.png" alt="Most Expensive Trip Route" style="max-width: 60%; border: none; outline: none; box-shadow: none;">
 
 ## 🛠️ Tecnologias Utilizadas
