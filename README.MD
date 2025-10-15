@@ -50,7 +50,7 @@ To get your Uber trip history:
 </div>
 <div style="flex: 1; padding: 10px; margin-left: 10px; text-align: center;">
 
-<img src="img/download_receipt.gif" alt="Download Uber Data" style="max-width: 70%; border: none; outline: none; box-shadow: none;">
+<img src="img/download_receipt.gif" alt="Download Uber Data" style="width: 60%; border: none; outline: none; box-shadow: none;">
 
 </div>
 </div>
