@@ -22,34 +22,39 @@ An interactive web application for comprehensive analysis of your Uber expenses.
 Visit [uber-expense-analytics.streamlit.app](https://uber-expense-analytics.streamlit.app/)
 
 ### 2. Export Your Uber Data
+
 <div style="display: flex;">
-   <div style="flex: 1; padding: 10px;">
-   To get your Uber trip history:
-   
-   1. **Access Uber Website**
-      - Go to [https://privacy.uber.com/exploreyourdata/](https://privacy.uber.com/exploreyourdata/)
-      - Log in with your account
-   
-   2. **Navigate to Downloand**
-      - Click on the top menu
-      - Select **"Download"**
-      - Click on **"Download your data"**
-   
-   3. **Request the Export**
-      - Check the **"Trip history"** option
-      - Click **"Submit request"**
-      - Wait for the confirmation email (can take a few minutes or up to 24 hours)
-   
-   4. **Download the File**
-      - You'll receive an email with a download link
-      - Download the ZIP file
-      - Extract the `trips_data.csv` file
-   </div>
-<div style="flex: 1; padding: 10px; margin-left: 10px; text-align: center;">
-   <img src="img/download_receipt.gif" alt="Download Uber Data" 
-         style="max-width: 70%; border: none; outline: none; box-shadow: none;">
+<div style="flex: 1; padding: 10px;">
+
+To get your Uber trip history:
+
+1. **Access Uber Website**
+   - Go to [https://privacy.uber.com/exploreyourdata/](https://privacy.uber.com/exploreyourdata/)
+   - Log in with your account
+
+2. **Navigate to Download**
+   - Click on the top menu
+   - Select **"Download"**
+   - Click on **"Download your data"**
+
+3. **Request the Export**
+   - Check the **"Trip history"** option
+   - Click **"Submit request"**
+   - Wait for the confirmation email (can take a few minutes or up to 24 hours)
+
+4. **Download the File**
+   - You'll receive an email with a download link
+   - Download the ZIP file
+   - Extract the `trips_data.csv` file
+
 </div>
-</div
+<div style="flex: 1; padding: 10px; margin-left: 10px; text-align: center;">
+
+<img src="img/download_receipt.gif" alt="Download Uber Data" style="max-width: 70%; border: none; outline: none; box-shadow: none;">
+
+</div>
+</div>
+
 
 
 1. In the application, click the **"Browse files"** button or drag your CSV file (eg. `trips_data-0.csv`) into the upload area
